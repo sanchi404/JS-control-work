@@ -1,0 +1,122 @@
+/*Общие найстройки*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Центрируем контейнер и задаем фон карточек */
+.container {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* Блок ввода (инпут + кнопка) */
+
+.inputBlock{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.inputBlock label{
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+/* Поле ввода */
+.inputBlock input{
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.inputBlock button{
+    margin: 0;
+}
+/* Блок списка */
+.listBlock{
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+.listBlock label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.listBlock select{
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    min-height: 120px;
+}
+
+/* Контейнер для кнопок Sort and delete */
+.controlsBtn{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопок */
+.button{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5c7fa3;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.5s ease;
+    margin: 0;
+}
+.button:hover{
+    background-color: #4b6c8a;
+}
+
+/* Адаптация */
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 16px;
+    }
+    .inputBlock{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .controlsBtn{
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

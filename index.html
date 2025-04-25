@@ -5,9 +5,35 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Aplication</title>
 </head>
 <body>
-<div>test</div>
+<div class="container">
+    <h1>Test</h1>
+<!--    Блок Ввода пары "Name/Value/Pair-->
+    <div class="inputBlock">
+        <label for="input">Name/Value/Pair</label>
+        <input type="text"
+               id="input"
+               placeholder="Enter: Name=Value">
+        <button id="addBtn" class="button">Add</button>
+    </div>
+<!--  Блок вывода информации с кнопками Sort: Name/Value и btn:Delete  -->
+    <div class="listBlock">
+        <label for="pairList">Name/Value Pair List</label>
+        <select
+                id="pairList"
+                multiple
+                size="10"
+        ></select>
+    </div>
+<!--  Блок кнопок управления списком  -->
+    <div class="controlsBtn">
+        <button id="sortNameBtn" class="button">Sort by Name </button>
+        <button id="sortValueBtn" class="button">Sort by Value </button>
+        <button id="deleteBtn" class="button">Delete </button>
+    </div>
+</div>
 </body>
 </html>
