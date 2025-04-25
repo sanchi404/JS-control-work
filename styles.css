@@ -104,6 +104,18 @@ body {
     background-color: #4b6c8a;
 }
 
+.button:active{
+    transform:translateY(2px);
+}
+
+.error{
+    display: block;
+    color: #c00;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 10px;
+}
+
 /* Адаптация */
 
 @media (max-width: 600px) {
