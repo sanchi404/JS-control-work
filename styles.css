@@ -52,7 +52,7 @@ body {
     margin: 0;
 }
 /* Блок списка */
-.listBlock{
+.listBlock {
     margin-bottom: 20px;
     padding: 16px;
     background-color: #fafafa;
@@ -60,20 +60,12 @@ body {
     border-radius: 6px;
     box-sizing: border-box;
 }
-.listBlock label{
+.listBlock label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
-.listBlock select{
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
-    min-height: 120px;
-}
+
 
 /* Контейнер для кнопок Sort and delete */
 .controlsBtn{
@@ -115,6 +107,46 @@ body {
     margin-top: 4px;
     min-height: 10px;
 }
+
+/* Добавляем чекбокс стили */
+
+.pair-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.pair-list li {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+}
+.pair-list li input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Стили для области с чек-листом */
+.pair-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    /* сразу видно «коробку» */
+    min-height: 250px;
+
+    /* если элементов станет много — будет прокрутка */
+    max-height: 200px;
+    overflow-y: auto;
+
+    box-sizing: border-box;
+}
+
+
 
 /* Адаптация */
 
