@@ -19,8 +19,16 @@ addBtn.addEventListener('click', () => {
         inputError.textContent = 'Укажите имя и значение через "=" ';
         return;
     }
-    const name = parts[0]
-    const value = parts[1]
+    const name = parts[0].trim();
+    const value = parts[1].trim();
+
+    // проверка на alphanumeric
+    const alphaNum = /^[A-Za-z0-9]+$/;
+    if (!alphaNum.test(name) || !alphaNum.test(value)) {
+        inputError.textContent = 'Имя и значение — только буквы и цифры';
+        return;
+    }
+
 
     if (name === '') {
         inputError.textContent = 'Введите имя до знака "="';
@@ -94,15 +102,14 @@ sortValueBtn.addEventListener('click', () => {
     console.log(massValue);
     massValue.forEach(value => pairList.appendChild(value));
 
+//  Удаляем после того как выберем какой-то чекбокс
 })
 deleteBtn.addEventListener('click', () => {
-
-    const items = document.querySelectorAll('#pairList li');
-
-    items.forEach(li=>{
-        const chkbox = li.querySelector('input[type="checkbox"]');
-
-    })
-
-})
+    document.querySelectorAll('#pairList li').forEach(li => {
+            const chk = li.querySelector('input[type="checkbox"]');
+            if (chk.checked) {
+                li.remove();
+            }
+        });
+});
 
