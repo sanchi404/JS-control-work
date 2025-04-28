@@ -57,6 +57,7 @@ addBtn.addEventListener('click', () => {
 
 pairInput.addEventListener('keydown', (ev) => {
     if (ev.key === 'Enter') {
+        inputError.textContent = '';
         addBtn.click();
     }
 });
@@ -64,6 +65,7 @@ pairInput.addEventListener('keydown', (ev) => {
 // сортируем по имени
 
 sortNameBtn.addEventListener('click', () => {
+    inputError.textContent = ''
     console.log(pairList);
 
 
@@ -87,6 +89,7 @@ sortNameBtn.addEventListener('click', () => {
 // Сортируем по Value
 
 sortValueBtn.addEventListener('click', () => {
+    inputError.textContent = ''
 
     const nodeListValue = document.querySelectorAll('#pairList li');
     const massValue = Array.from(nodeListValue);
@@ -105,6 +108,7 @@ sortValueBtn.addEventListener('click', () => {
 //  Удаляем после того как выберем какой-то чекбокс
 })
 deleteBtn.addEventListener('click', () => {
+    inputError.textContent = ''
     document.querySelectorAll('#pairList li').forEach(li => {
             const chk = li.querySelector('input[type="checkbox"]');
             if (chk.checked) {
